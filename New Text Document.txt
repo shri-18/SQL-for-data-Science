@@ -1,0 +1,38 @@
+SELECT first_name, last_name from actor;
+select * from customer;
+select email from customer;
+select first_name, last_name, email from customer;
+select distinct (first_name,last_name) from customer;
+/* to get the unique elements from the coloumns we use DICTINCT keyword*/
+select distinct first_name, last_name from customer;
+
+SELECT * FROM film;
+SELECT DISTINCT release_year FROM film;
+SELECT DISTINCT rental_rate FROM film;
+SELECT rental_rate FROM film;
+SELECT  rating from film;
+
+/*COUNT FUNCTION (Agreegate function)*/
+/*use to get the Number of rows */
+SELECT COUNT(title) from film;
+
+select count(*) from film;
+
+
+select count(title), count(rating) from film;
+
+SELECT * FROM payment;
+SELECT count(*) FROM payment;
+SELECT amount FROM payment;
+SELECT Distinct(amount) FROM payment;
+SELECT count(Distinct(amount)) FROM payment;
+
+
+
+/*WHERE CLAUSE*/
+
+SELECT title, rental_rate from film where rating='G';
+
+SELECT * FROM customer where first_name = 'Jared';
+SELECT * FROM film 
+WHERE rental_rate >4;
